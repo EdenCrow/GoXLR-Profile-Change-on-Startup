@@ -19,17 +19,17 @@ Avoid having to select your default profile on boot after setting the device to 
     - App (`GoXLR App.exe`)
     - Control Panel (`GoXLRAudioCplApp.exe`)
     - Settings (`GoXLR.settings`)
+  
+4) Delete the shortcuts to the GoXLR app and control panel from the `Startup` folder, which can usually be found at: `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp`
 
-4) Move the file to your `Startup` folder, which can usually be found at: `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp`
-
-5) In this folder should also be shortcuts to the GoXLR app and control panel, which must be deleted
+5) In the `Task Scheduler` program, create a new task that runs the script at log in (optionally with a 30 second delay so that the GoXLR app can connect to the Stream Deck app if you are using one)
 
 The script should now run the next time you boot your system and start the GoXLR device with the requested profile.
 
 ## Why?
 The GoXLR is a fantastic audio interface built for streamers. However, its bright lights can be an eyesore and a power drain when your PC is shut down.
 
-To combat this I use my [Stream Deck](https://www.elgato.com/en/stream-deck-xl) with a [multi-action switch](https://help.elgato.com/hc/en-us/articles/360027960912-Elgato-Stream-Deck-Multi-Actions) for selecting the 'Sleep' profile and turning off my machine. This profile turns off the lights and sets the faders to 0. The beta release of the GoXLR application also includes the option of selecting a profile to use on closing the application, which most will use to select this 'Sleep' profile.
+To combat this I use my [Stream Deck](https://www.elgato.com/en/stream-deck-xl) with a [multi-action switch](https://help.elgato.com/hc/en-us/articles/360027960912-Elgato-Stream-Deck-Multi-Actions) for selecting the 'Sleep' profile and turning off my machine. This profile turns off the lights and sets the faders to 0.
 
 However, upon starting the PC again the device will still be in this 'Sleep' profile. The user will then have to select a non-'sleep' profile every time they boot their machine.
 
